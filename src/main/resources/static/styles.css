@@ -1,0 +1,46 @@
+.table {
+  display: table;
+  width: 100%;
+  max-width: 1484px;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.caption {
+  display: table-caption;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 24px;
+  text-align: center;
+}
+
+.thead {
+  display: table-header-group;
+  color: white;
+  background-color: brown;
+}
+
+.tbody {
+  display: table-row-group;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding: 8px;
+  vertical-align: middle;
+  border: 1px solid beige;
+}
+
+.thead .cell {
+  text-align: center;
+  text-decoration: underline;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Справочник банков</title>
+    <link rel="stylesheet" th:href="@{styles.css}"/>
+</head>
+<body>
+<div th:class="table">
+    <div th:class="caption">Справочник банков</div>
+    <div th:class="thead">
+        <div th:class="row">
+            <div th:class="cell">№</div>
+            <div th:class="cell">Банк/филиал</div>
+            <div th:class="cell">БИК</div>
+            <div th:class="cell">БИК головного банка</div>
+            <div th:class="cell">Условный номер участника расчетов</div>
+            <div th:class="cell">Статус БИК</div>
+            <div th:class="cell">Наименование</div>
+            <div th:class="cell">Населенный пункт</div>
+            <div th:class="cell">Код контроля</div>
+            <div th:class="cell">Дата контроля</div>
+            <div th:class="cell">БИК преемника</div>
+        </div>
+    </div>
+    <div th:class="tbody">
+        <div th:class="row" th:each="bank, item : ${banks}">
+            <div th:class="cell" th:text="${item.count}"/>
+            <div th:class="cell" th:text="${bank.typ}"/>
+            <div th:class="cell" th:text="${bank.cdBank}"/>
+            <div th:class="cell" th:text="${bank.cdHeadBank}"/>
+            <div th:class="cell" th:text="${bank.nrBank}"/>
+            <div th:class="cell" th:text="${bank.bicStatus}"/>
+            <div th:class="cell" th:text="${bank.nmBankShort}"/>
+            <div th:class="cell" th:text="${bank.adrBank}"/>
+            <div th:class="cell" th:text="${bank.cdControl}"/>
+            <div th:class="cell" th:text="${#dates.format(bank.dtControl, 'dd.MM.yyyy')}"/>
+            <div th:class="cell" th:text="${bank.cdBankSuccessor}"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

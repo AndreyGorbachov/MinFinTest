@@ -1,0 +1,13 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/minfintest
+    username: mft_user
+    password: mft_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
